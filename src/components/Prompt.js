@@ -1,19 +1,22 @@
 import React, { useState } from 'react'
 import { Configuration, OpenAIApi } from "openai";
 
-import Response from "./Response"
+import Response from './Response';
+
+
 
 export default function Prompt() {
   const [userPrompt, setUserPrompt] = useState('')
   const [result, setResult] = useState()
 
-  async function onSubmit(e) {
-    e.preventDefault();    
+  function onSubmit(e) {
+    e.preventDefault();     
+    
     const formData = new FormData(e.target)
     const formDataObj = Object.fromEntries(formData.entries())    
 
     const configuration = new Configuration({
-      apiKey: process.env.REACT_APP_OPENAI_SECRET,
+      apiKey: process.env.OPENAI_API_KEY,
     });
     const openai = new OpenAIApi(configuration);
 
