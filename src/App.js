@@ -1,16 +1,14 @@
 import './App.css';
 
 // components
-import Nav from './components/Nav';
+import Header from './components/Header';
 import Prompt from "./components/Prompt"
-import Response from "./components/Response"
 
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <Prompt />
-      <Response />
+    <div className="App">      
+      <Header />
+      <Prompt />            
     </div>
   );
 }
