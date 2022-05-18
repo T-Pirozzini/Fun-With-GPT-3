@@ -47,9 +47,11 @@
   margin: auto 5px;
   width: 30%;  
   font-family: 'Abel', sans-serif;
+  transition-duration: .5s;
 }
 .prompt-btn:hover {
   background-color: rgba(255, 255, 255, 0.267);
+  transition-duration: .5s;
 }
 
 
