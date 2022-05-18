@@ -61,7 +61,7 @@ export default function Prompt() {
           className="prompt-input"
           type='text'
           name='prompt'
-          placeholder='Enter a prompt'
+          placeholder='Enter a prompt... e.g.Tell me a good robot joke'
           value={userPrompt}
           onChange={(e) => {setUserPrompt(e.target.value)}}
         />       
