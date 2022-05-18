@@ -35,18 +35,17 @@ export default function Prompt() {
       frequency_penalty: 0.0,
       presence_penalty: 0.0,
     })
-    .then((response) => {
+    .then((response) => {      
       setUserPrompt(`${formDataObj.prompt}`)
       setResult(`${response.data.choices[0].text}`)     
-      setId(generateID())     
-
+      setId(generateID())    
       let responseObj
 
-      responseObj = {
+      responseObj = {        
         id: id,
-        prompt: userPrompt,
+        prompt: `${formDataObj.prompt}`,
         response: `${response.data.choices[0].text}`
-      }
+      }      
       payload.push(responseObj)          
     })       
   }  
