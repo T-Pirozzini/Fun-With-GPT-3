@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
 
 export default function Response(props) {
-  const { prompt, result } = props 
+  const { payload } = props
 
   return (
     <div>
-      {/* results displayed in a list, sorted newest to oldest */}      
-      <h3>AI Response</h3>
-      <p>{result}</p>
+      <ul>
+        {payload.map((load) => (
+          <li key={load.id}>       
+            <h3>AI Response {load.id}</h3>
+            <p>PROMPT: {load.prompt}</p>
+            <p>RESPONSE: {load.response}</p>
+          </li>              
+        ))}
+      </ul>    
     </div>
   )
 }

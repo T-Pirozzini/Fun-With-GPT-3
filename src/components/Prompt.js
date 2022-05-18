@@ -1,13 +1,20 @@
 import React, { useState } from 'react'
+
+// openAI API
 import { Configuration, OpenAIApi } from "openai";
 
+// components
 import Response from './Response';
-
-
 
 export default function Prompt() {
   const [userPrompt, setUserPrompt] = useState('')
-  const [result, setResult] = useState()
+  const [result, setResult] = useState('') 
+  const [id, setId] = useState(1) 
+  const [payload, setPayload] = useState([]) 
+  
+  const generateID = (e) => {
+    return id + 1;
+  }  
 
   function onSubmit(e) {
     e.preventDefault();     
@@ -30,10 +37,20 @@ export default function Prompt() {
     })
     .then((response) => {
       setUserPrompt(`${formDataObj.prompt}`)
-      setResult(response.data.choices[0].text)      
-    })
-  }    
+      setResult(`${response.data.choices[0].text}`)     
+      setId(generateID())     
 
+      let responseObj
+
+      responseObj = {
+        id: id,
+        prompt: userPrompt,
+        response: `${response.data.choices[0].text}`
+      }
+      payload.push(responseObj)          
+    })       
+  }  
+  
   return (
     <div>    
       <form onSubmit={onSubmit} >
@@ -43,13 +60,12 @@ export default function Prompt() {
           name='prompt'
           placeholder='Enter a prompt'
           value={userPrompt}
-          onChange={(e) => setUserPrompt(e.target.value)}
+          onChange={(e) => {setUserPrompt(e.target.value)}}
         />       
         <input type='submit' value='Get openAI Response' />  
       </form>
-      <Response
-        prompt={userPrompt}
-        result={result}
+      <Response        
+        payload={payload}       
       />        
     </div>
   )
