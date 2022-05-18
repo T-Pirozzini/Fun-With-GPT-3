@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@600&family=Macondo&display=swap');
+li {
+  list-style: none;
+}
+.response {
+  margin: 30px auto;
+  border: 2px solid #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(250, 248, 248, 0.295);  
+  display: flex;
+  flex-direction: column;
+  border-left: 6px solid #fff;
+  background-color: rgba(255, 255, 255, 0.397);  
+  margin: 10px;
+  overflow: hidden;
+}
+.response-title {
+  font-family: 'Macondo', cursive;
+}
+span {
+  font-weight: 700;
+  font-family: 'Abel', sans-serif;
+}
+.response-text {
+text-align: start;
+font-size: 1.2em;
+padding: 0px 10px;
+font-family: 'Abel', sans-serif;
+}

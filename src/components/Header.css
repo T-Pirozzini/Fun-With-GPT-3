@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@600&family=Macondo&display=swap');
+.header {
+  display: flex;
+  width: 100%;
+  background-color: rgba(6, 142, 160, 0.39);
+  box-sizing: border-box;
+  padding: 20px 10px;
+}
+.title {
+  margin: 0px 50px;
+  color: rgb(83, 82, 82);
+  letter-spacing: 1px;
+  font-size: 2em;
+  font-family: 'Cairo', sans-serif;
+}
+.icon {
+  font-size: 1.5em;
+}

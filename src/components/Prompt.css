@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Cairo:wght@600&family=Macondo&display=swap');
+.prompt-container {
+  margin: 20px auto;
+  width: 60%;  
+  display: flex;  
+  justify-content: center;
+  flex-direction: column;  
+  background: rgba(6, 142, 160, 0.712);
+  border-radius: 10px;
+  padding: 20px;      
+}
+.prompt-form {  
+  padding: 40px;
+  border-radius: 10px;
+  color: #fff; 
+}
+.prompt-label {
+  margin: 0 auto 20px;
+  display: block;
+  color: #fff;
+  font-size: 2.5em;
+  margin: 20px;
+  font-family: 'Abel', sans-serif;
+}
+.prompt-input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 4px;
+  color: #555;
+  font-size: 1.5em;
+  margin: 20px;  
+  font-family: 'Abel', sans-serif;
+}
+.prompt-btn {
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 6px 12px;
+  background-color: transparent;
+  font-size: 1.5em;
+  border-radius: 4px;
+  cursor: pointer;  
+  margin: auto 5px;
+  width: 30%;  
+  font-family: 'Abel', sans-serif;
+}
+.prompt-btn:hover {
+  background-color: rgba(255, 255, 255, 0.267);
+}
+
+

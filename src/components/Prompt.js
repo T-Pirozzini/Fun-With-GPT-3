@@ -6,6 +6,9 @@ import { Configuration, OpenAIApi } from "openai";
 // components
 import Response from './Response';
 
+// styles
+import './Prompt.css'
+
 export default function Prompt() {
   const [userPrompt, setUserPrompt] = useState('')
   const [result, setResult] = useState('') 
@@ -46,22 +49,23 @@ export default function Prompt() {
         prompt: `${formDataObj.prompt}`,
         response: `${response.data.choices[0].text}`
       }      
-      payload.push(responseObj)          
+      payload.unshift(responseObj)          
     })       
   }  
   
   return (
-    <div>    
-      <form onSubmit={onSubmit} >
-        <label>Enter Prompt: </label>
+    <div className="prompt-container">    
+      <form className="prompt-form" onSubmit={onSubmit} >
+        <label className="prompt-label">Give GPT-3 a prompt . . .</label>
         <input
+          className="prompt-input"
           type='text'
           name='prompt'
           placeholder='Enter a prompt'
           value={userPrompt}
           onChange={(e) => {setUserPrompt(e.target.value)}}
         />       
-        <input type='submit' value='Get openAI Response' />  
+        <input className="prompt-btn" type='submit' value='ASK GPT-3' />  
       </form>
       <Response        
         payload={payload}       
