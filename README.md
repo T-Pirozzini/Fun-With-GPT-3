@@ -5,7 +5,7 @@ Enter a prompt and GPT-3 will return a response that is difficult to distinguish
 #### HTML/CSS/JS/React
 
 ## :video_camera: Live Demo
-<a href="">Click Here!</a>
+<a href="https://62857a1bc8c9561337a2be9d--earnest-swan-080405.netlify.app/">Click Here!</a>
 
 ## :camera: Screenshot
 Home
