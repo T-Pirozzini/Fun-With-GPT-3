@@ -49,7 +49,8 @@ export default function Prompt() {
         prompt: `${formDataObj.prompt}`,
         response: `${response.data.choices[0].text}`
       }      
-      payload.unshift(responseObj)          
+      payload.unshift(responseObj)
+      setUserPrompt('')          
     })       
   }  
   
