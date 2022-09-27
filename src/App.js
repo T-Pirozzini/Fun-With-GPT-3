@@ -10,7 +10,8 @@ function App() {
     <div className="App">      
       <Header />
       <Home />
-      <Footer />            
+      <p className="expired">Sorry - Usage has exceeded the trial period.</p>           
+      <Footer /> 
     </div>
   );
 }
